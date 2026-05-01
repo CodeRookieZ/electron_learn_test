@@ -1,0 +1,40 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "learn",
+  "keywords": [
+    "electron"
+  ],
+  "homepage": "https://github.com/CodeRookieZ/electron_learn_test#readme",
+  "bugs": {
+    "url": "https://github.com/CodeRookieZ/electron_learn_test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeRookieZ/electron_learn_test.git"
+  },
+  "license": "ISC",
+  "author": "JianChuanZhao",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "test",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-deb": "^7.11.1",
+    "@electron-forge/maker-rpm": "^7.11.1",
+    "@electron-forge/maker-squirrel": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^41.4.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
