@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
-
+require('update-electron-app')
 const path = require('node:path')
 
 const createWindow = () => {
@@ -10,9 +10,11 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js')
     }
   })
-  win.loadFile('index.html')
+  win.loadFile('src/renderer/index.html')
 }
 app.whenReady().then(() => {
+  if (require('electron-squirrel-startup')) app.quit();
   ipcMain.handle('ping', () => 'pong')
-  createWindow()
+  createWindow();
+  autoUpdateApp();
 })
